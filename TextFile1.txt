@@ -1,0 +1,10 @@
+1. Install the Ocelot package in gateway service
+2. Ocelot package supports royting for all the service
+3. We have create .json file inside the gateway service
+4. The purpose of create router.json file is the define end point of all service
+5. We have to call router.json file from program.cs
+
+6. Change the port number of all the service from lunchSetting.json file
+	i) OrderService->Port Number 5007
+	ii) ProductService-> portNumber 5008
+	iii) GatewaySerive -> port number 7000
