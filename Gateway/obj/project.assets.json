@@ -408,23 +408,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GKP\\.nuget\\packages\\": {},
+    "C:\\Users\\GaneshKPandey\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
+      "projectUniqueName": "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
       "projectName": "Gateway",
-      "projectPath": "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
-      "packagesPath": "C:\\Users\\GKP\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\Gateway\\obj\\",
+      "projectPath": "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
+      "packagesPath": "C:\\Users\\GaneshKPandey\\.nuget\\packages\\",
+      "outputPath": "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\GKP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GaneshKPandey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

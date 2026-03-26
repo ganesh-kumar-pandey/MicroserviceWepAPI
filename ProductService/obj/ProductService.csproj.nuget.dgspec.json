@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\ProductService\\ProductService.csproj": {}
+    "D:\\Monorepo\\MicroserviceWepAPI\\ProductService\\ProductService.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\ProductService\\ProductService.csproj": {
+    "D:\\Monorepo\\MicroserviceWepAPI\\ProductService\\ProductService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\ProductService\\ProductService.csproj",
+        "projectUniqueName": "D:\\Monorepo\\MicroserviceWepAPI\\ProductService\\ProductService.csproj",
         "projectName": "ProductService",
-        "projectPath": "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\ProductService\\ProductService.csproj",
-        "packagesPath": "C:\\Users\\GKP\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\MicroserviceProjects\\MicroserviceWepAPI\\ProductService\\obj\\",
+        "projectPath": "D:\\Monorepo\\MicroserviceWepAPI\\ProductService\\ProductService.csproj",
+        "packagesPath": "C:\\Users\\GaneshKPandey\\.nuget\\packages\\",
+        "outputPath": "D:\\Monorepo\\MicroserviceWepAPI\\ProductService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\GKP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GaneshKPandey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,7 +30,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -49,7 +48,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Swashbuckle.AspNetCore": {

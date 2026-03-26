@@ -6,19 +6,19 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5007
+          "Port": 5008
         }
       ],
       "UpstreamPathTemplate": "/gateway/products",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/order",
+      "DownstreamPathTemplate": "/api/Order/GetOrders",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5008
+          "Port": 5007
         }
       ],
       "UpstreamPathTemplate": "/gateway/orders",
