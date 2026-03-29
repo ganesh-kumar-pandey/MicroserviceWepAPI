@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\Gateway.csproj": {}
+    "D:\\Projects\\MicroserviceWepAPI\\Gateway\\Gateway.csproj": {}
   },
   "projects": {
-    "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\Gateway.csproj": {
+    "D:\\Projects\\MicroserviceWepAPI\\Gateway\\Gateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
+        "projectUniqueName": "D:\\Projects\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
         "projectName": "Gateway",
-        "projectPath": "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
-        "packagesPath": "C:\\Users\\GaneshKPandey\\.nuget\\packages\\",
-        "outputPath": "D:\\Monorepo\\MicroserviceWepAPI\\Gateway\\obj\\",
+        "projectPath": "D:\\Projects\\MicroserviceWepAPI\\Gateway\\Gateway.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\MicroserviceWepAPI\\Gateway\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\GaneshKPandey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -48,6 +49,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {

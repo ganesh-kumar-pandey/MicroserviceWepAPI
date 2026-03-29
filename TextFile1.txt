@@ -8,3 +8,8 @@
 	i) OrderService->Port Number 5007
 	ii) ProductService-> portNumber 5008
 	iii) GatewaySerive -> port number 7000
+
+There are 6 major microserve principle
+1. gateway pattern
+2. messaging for transaction -- saga pattern(Orchestration,choreogrphy)
+Do we need  RabitMQ to implement Saga Pattern? Answer is => "No" 
