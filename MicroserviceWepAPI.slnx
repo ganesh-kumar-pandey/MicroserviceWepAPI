@@ -2,6 +2,7 @@
   <Folder Name="/Solution Items/">
     <File Path="TextFile1.txt" />
   </Folder>
+  <Project Path="ExtensionsLib/ExtensionsLib.csproj" Id="0c823c57-73d5-41fa-9fc2-d977739def50" />
   <Project Path="Gateway/Gateway.csproj" />
   <Project Path="OrderService/OrderService.csproj" />
   <Project Path="ProductService/ProductService.csproj" />

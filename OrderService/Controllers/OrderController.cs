@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OrderService.Models;
 
 namespace OrderService.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         private static List<Order> orders = new()

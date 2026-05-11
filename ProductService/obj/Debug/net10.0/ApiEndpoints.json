@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "ProductService.Controllers.ProductController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Product/GetProduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

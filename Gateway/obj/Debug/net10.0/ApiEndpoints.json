@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Gateway.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Gateway.Models.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gateway.Controllers.AuthController",
+    "Method": "ping",
+    "RelativePath": "api/auth/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Gateway.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

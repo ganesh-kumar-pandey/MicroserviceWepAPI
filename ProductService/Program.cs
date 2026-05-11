@@ -1,3 +1,4 @@
+using ExtensionsLib;
 using Swashbuckle.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCustomJwtAuthentication(builder.Configuration);
+builder.Services.AddAuthorization();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
@@ -18,8 +21,13 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 //app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers();
+//app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints?.MapControllers();
+});
 
 app.Run();

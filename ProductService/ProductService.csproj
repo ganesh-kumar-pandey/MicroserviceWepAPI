@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExtensionsLib\ExtensionsLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Swashbuckle.AspNetCore.Swagger">
       <HintPath>..\PackageRef\Swashbuckle.AspNetCore.Swagger.dll</HintPath>
     </Reference>

@@ -13,3 +13,15 @@ There are 6 major microserve principle
 1. gateway pattern
 2. messaging for transaction -- saga pattern(Orchestration,choreogrphy)
 Do we need  RabitMQ to implement Saga Pattern? Answer is => "No" 
+
+03-05-2026
+ 
+Ocelot is configured and acts as gateway  for all the services.
+User request to gateway and gateway forward the request to the requested end-points.
+There is no authentication applied at gateway - level , To forward the request
+Now we have to apply JWT authentication at gateway-level so that gateway end-point generate the token , then user can access the requested end -point.
+All the services Under the gateway must be private end-point .
+ 
+Can  you explain the Authentication WorkFlow in Microservice based Application?
+ 
+Client ……Login…. GatewayService……AuthAPI(We have to include authapi Controller)……JWTToken Generated….Client Send Token… Gateway validates token….Ocelot allows the request to order/product service
