@@ -1,65 +1,68 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+
 namespace ExtensionsLib
 {
     public static class JwtAuthenticationExtensions
     {
-        // Notice the 'this IServiceCollection' - this makes it an extension method
-        public static IServiceCollection AddCustomJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCustomJwtAuthentication(
+            this IServiceCollection services, IConfiguration configuration)
         {
-            // 1. Dynamically pull values from the appsettings.json of the project calling this method
-            var secretKey = configuration["Jwt:SecretKey"];
-            var issuer = configuration["Jwt:Issuer"] ?? "gatewayapi";
-            var audience = configuration["Jwt:Audience"] ?? "clientapp";
-            //var secretKey = "MySuperSecretAndSecureKeyThatIsAtLeast32BytesLong!";
-            //var issuer = "gatewayapi";
-            //var audience = "clientapp";
+            //var secretKey = "MySuperSecretAndSecureKeyThatIsAtLeast32BytesLongg";
+            //var issuer    = "gatewayapi";
+            //var audience  = "clientapp";
 
-            if (string.IsNullOrEmpty(secretKey))
-            {
-                throw new ArgumentNullException("Jwt:SecretKey", "JWT Secret Key is missing in appsettings.json");
-            }
+            services
+       .AddAuthentication(options =>
+       {
+           options.DefaultAuthenticateScheme = "Bearer";
+           options.DefaultChallengeScheme = "Bearer";
+       })
+       .AddJwtBearer("Bearer", options =>
+       {
+           options.RequireHttpsMetadata = false;
+           options.SaveToken = true;
 
-            // 2. The explicit configuration to prevent the 500 Default Challenge Error
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-  .AddJwtBearer(options =>  // ← no explicit name
-  {
-      options.RequireHttpsMetadata = false;
-      options.SaveToken = true;
-      options.IncludeErrorDetails = true;
+           options.TokenValidationParameters =
+               new TokenValidationParameters
+               {
+                   ValidateIssuerSigningKey = true,
+                   ValidateIssuer = true,
+                   ValidateAudience = true,
+                   ValidateLifetime = true,
 
-      options.TokenValidationParameters = new TokenValidationParameters
-      {
-          ValidateIssuer = true,
-          ValidateAudience = true,
-          ValidateLifetime = true,
-          ValidateIssuerSigningKey = true,
-          ValidIssuer = issuer,
-          ValidAudience = audience,
-          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-          ClockSkew = TimeSpan.FromMinutes(5)  // ← safer default
-      };
+                   ValidIssuer = "gatewayapi",
+                   ValidAudience = "clientapp",
 
-      options.Events = new JwtBearerEvents
-      {
-          // OnMessageReceived removed — middleware handles extraction natively
-          OnAuthenticationFailed = context =>
-          {
-              Console.ForegroundColor = ConsoleColor.Red;
-              Console.WriteLine($"\n--- JWT AUTH FAILED: {context.Exception.Message} ---\n");
-              Console.ResetColor();
-              return Task.CompletedTask;
-          }
-      };
-  });
+                   IssuerSigningKey =
+                       new SymmetricSecurityKey(
+                           Encoding.UTF8.GetBytes(
+                               "MySuperSecretAndSecureKeyThatIsAtLeast32BytesLongg")),
+
+                   ClockSkew = TimeSpan.Zero
+               };
+
+           options.Events = new JwtBearerEvents
+           {
+               OnAuthenticationFailed = context =>
+               {
+                   Console.WriteLine("AUTH FAILED");
+                   Console.WriteLine(context.Exception);
+
+                   return Task.CompletedTask;
+               },
+
+               OnTokenValidated = context =>
+               {
+                   Console.WriteLine("TOKEN VALIDATED");
+
+                   return Task.CompletedTask;
+               }
+           };
+       });
 
             return services;
         }

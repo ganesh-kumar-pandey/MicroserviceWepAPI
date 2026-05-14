@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/product/GetProduct",
+      "DownstreamPathTemplate": "/api/Product/GetProduct",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -10,7 +10,7 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/products",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
@@ -25,13 +25,13 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/orders",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:7000/{everything}"
+    "BaseUrl": "http://localhost:7000"
   }
 }

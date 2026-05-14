@@ -44,10 +44,12 @@ namespace Gateway.Services
         {
             // 1. Pull the 32+ byte key from appsettings.json or Environment Variables
 
-            var secretKey = _config["Jwt:SecretKey"];
-            var issuer = _config["Jwt:Issuer"] ?? "gatewayapi";
-            var audience = _config["Jwt:Audience"] ?? "clientapp";
-            //var secretKey = "MySuperSecretAndSecureKeyThatIsAtLeast32BytesLong!";
+            //var secretKey = _config["Jwt:SecretKey"];
+            //var issuer = _config["Jwt:Issuer"] ?? "gatewayapi";
+            //var audience = _config["Jwt:Audience"] ?? "clientapp";
+            var secretKey = "MySuperSecretAndSecureKeyThatIsAtLeast32BytesLongg";
+            var issuer = "gatewayapi";
+            var audience = "clientapp";
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

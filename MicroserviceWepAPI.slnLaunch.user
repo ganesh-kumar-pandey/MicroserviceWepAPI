@@ -3,16 +3,19 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "OrderService\\OrderService.csproj",
-        "Action": "Start"
+        "Path": "Gateway\\Gateway.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
       },
       {
-        "Path": "Gateway\\Gateway.csproj",
-        "Action": "Start"
+        "Path": "OrderService\\OrderService.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
       },
       {
         "Path": "ProductService\\ProductService.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "http"
       }
     ]
   }
